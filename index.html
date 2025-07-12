@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>SvarLabs – Where every note finds its meaning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Music&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            background: #151c28;
+            color: #fff;
+            font-family: 'Noto Music', 'Noto Serif', serif;
+            text-align: center;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .logo {
+            font-family: 'Noto Music', 'Noto Serif', serif;
+            font-weight: 700;
+            font-size: 3.5rem;
+            letter-spacing: 0.07em;
+            display: inline-flex;
+            align-items: baseline;
+            gap: 0.01em;
+            color: #f9a826;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        .treble {
+            font-size: 1.18em;
+            vertical-align: middle;
+            margin-right: 0.03em;
+        }
+
+        .mirrored-quaver {
+            display: inline-block;
+            transform: scaleX(-1);
+            font-size: 2.38em;
+            /* visually matches the cap height of the text */
+            vertical-align: middle;
+            margin: 0 0.005em 0 0.005em;
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            color: #e0e0e0;
+            margin-bottom: 2em;
+            letter-spacing: 0.02em;
+            max-width: 400px;
+            font-weight: 400;
+        }
+
+        .cta {
+            background: #f9a826;
+            color: #151c28;
+            padding: 0.9em 2.5em;
+            border-radius: 30px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            transition: background 0.25s ease;
+        }
+
+        .cta:hover {
+            background: #e58e26;
+        }
+
+        footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: transparent;
+            text-align: center;
+            padding-bottom: 1em;
+            z-index: 10;
+        }
+
+        .copyright {
+            color: #aaa;
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo" aria-label="SvarLabs">
+        <span class="treble">&#119070;</span>
+        var La
+        <span class="mirrored-quaver">&#9834;</span>
+        s
+    </div>
+    <div class="tagline">
+        Where every note finds its meaning.
+    </div>
+</body>
+<footer>
+    <div class="copyright">
+        &copy; 2025 SvarLabs. All rights reserved.
+    </div>
+</footer>
+
+</html>
