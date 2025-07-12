@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>SvarLabs – SaMa</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Music&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Noto+Serif&display=swap" rel="stylesheet" />
   <style>
     body {
       background: #151c28;
       color: #fff;
-      font-family: 'Noto Music', 'Noto Serif', serif;
+      font-family: 'Noto Serif', serif;
       margin: 0;
       min-height: 100vh;
       display: flex;
@@ -18,6 +18,7 @@
       align-items: center;
       padding: 1rem;
       position: relative;
+      scroll-behavior: smooth;
     }
 
     header,
@@ -30,48 +31,79 @@
       box-sizing: border-box;
     }
 
-    .logo {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      color: #f9a826;
-      font-family: 'Noto Music', 'Noto Serif', serif;
-      font-weight: 700;
-      line-height: 1.1;
+    .logo-font-mix {
       margin-left: 1em;
-    }
-
-    .svar-line {
       display: flex;
-      align-items: center;
+      align-items: baseline;
+      font-weight: 700;
+    }
+
+    .s-sax {
+      font-family: 'Satisfy', cursive;
       font-size: 2.8rem;
+      color: #f9a826;
+      margin-right: 0.1em;
+      letter-spacing: 0.02em;
     }
 
-    .treble {
-      font-size: 1.8em;
-      margin-right: -0.15em;
+    .rest {
+      font-family: 'Noto Serif', serif;
+      font-size: 2.4rem;
+      color: #f9a826;
+      letter-spacing: 0.06em;
+    }
+
+    .labs {
+      font-family: 'Noto Serif', serif;
+      font-size: 1.3rem;
+      color: #fcd97b;
+      margin-left: 0.5em;
+      vertical-align: middle;
+      letter-spacing: 0.1em;
+    }
+
+    /* Hamburger Menu */
+    .nav-wrapper {
       position: relative;
-      top: 2px;
+      display: inline-block;
+      margin-right: 2em;
     }
 
-    .svar-text {
-      font-size: 1em;
-      letter-spacing: 0.03em;
-      padding-left: 0.05em;
+    .hamburger {
+      font-size: 2rem;
+      color: #fcd97b;
+      cursor: pointer;
+      user-select: none;
     }
 
-    .labs-line {
-      font-size: 1.2rem;
-      letter-spacing: 0.15em;
-      margin-left: 2.1em;
-      margin-top: 0.2em;
+    .nav-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 2.5rem;
+      background-color: #1f2937;
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 0.5em 1em;
+      z-index: 999;
+      min-width: 150px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
-    .nav-links a {
-      color: #f0f0f0;
+    .nav-menu a {
+      display: block;
+      color: #fcd97b;
+      padding: 0.4em 0;
       text-decoration: none;
-      margin-left: 1.5em;
-      font-size: 1.05rem;
+      font-size: 1rem;
+    }
+
+    .nav-menu a:hover {
+      color: #fff;
+    }
+
+    .nav-wrapper:hover .nav-menu {
+      display: block;
     }
 
     .center-content {
@@ -119,6 +151,34 @@
       color: #cfcfcf;
     }
 
+    .info-section {
+      max-width: 700px;
+      margin: 4em auto 2em;
+      text-align: center;
+      padding: 0 1em;
+    }
+
+    .info-section h2 {
+      font-size: 1.8rem;
+      color: #f9a826;
+      margin-bottom: 0.5em;
+      border-bottom: 1px solid #444;
+      display: inline-block;
+      padding-bottom: 0.2em;
+    }
+
+    .info-section p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 1em;
+    }
+
+    .info-section a {
+      color: #fcd97b;
+      text-decoration: underline;
+    }
+
     .copyright {
       text-align: center;
       color: #aaa;
@@ -131,36 +191,50 @@
 
 <body>
   <header>
-    <div class="logo" aria-label="SvarLabs">
-      <div class="svar-line">
-        <span class="treble">&#119070;</span><span class="svar-text">var</span>
-      </div>
-      <div class="labs-line">Labs</div>
+    <div class="logo-font-mix" aria-label="Svar Labs">
+      <span class="s-sax">S</span><span class="rest">var</span>
+      <span class="labs">Labs</span>
     </div>
-    <div class="nav-links">
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
+
+    <div class="nav-wrapper">
+      <div class="hamburger">&#9776;</div>
+      <div class="nav-menu">
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </header>
 
   <div class="center-content">
     <div class="sama-title">SaMa</div>
     <div class="sama-tagline">Born from melody, built for meaning.</div>
-
-    <div class="powered-by">
-      Powered by <em>Yaazh</em>
-    </div>
-
+    <div class="powered-by">Powered by <em>Yaazh</em></div>
     <p class="sama-description">
-      <strong>SaMa</strong> is Svar Labs’ flagship product — a semantic system for understanding sound, context, and musical intent. 
-      Inspired by the sacred <em>Sāma Veda</em> and powered by our internal engine <strong>Yaazh</strong>, 
+      <strong>SaMa</strong> is Svar Labs’ flagship product — a semantic system for understanding sound, context, and musical intent.
+      Inspired by the sacred <em>Sāma Veda</em> and powered by our semantic engine <strong>Yaazh</strong>,
       SaMa bridges ancient musical wisdom with modern AI.
     </p>
   </div>
 
+  <section id="about" class="info-section">
+    <h2>About Us</h2>
+    <p>
+      <strong>Svar Labs</strong> is a research-driven company reimagining how sound and meaning interact.
+      We believe music is more than expression — it’s structure, intelligence, and language.
+      Our flagship product, <strong>SaMa</strong>, is powered by <strong>Yaazh</strong>,
+      our semantic engine built on Indic wisdom and modern AI.
+    </p>
+  </section>
+
+  <section id="contact" class="info-section">
+    <h2>Contact Us</h2>
+    <p>Email us at: <a href="mailto:hello@svarlabs.com">hello@svarlabs.com</a></p>
+    <p>Or connect on <a href="https://linkedin.com/company/svarlabs" target="_blank">LinkedIn</a></p>
+  </section>
+
   <footer>
     <div class="copyright">
-      &copy; 2025 SvarLabs. All rights reserved.
+      &copy; 2025 Svar Labs. All rights reserved.
     </div>
   </footer>
 </body>
