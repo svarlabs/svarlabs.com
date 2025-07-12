@@ -2,112 +2,167 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>SvarLabs – Where every note finds its meaning</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Music&display=swap" rel="stylesheet" />
-    <style>
-        body {
-            background: #151c28;
-            color: #fff;
-            font-family: 'Noto Music', 'Noto Serif', serif;
-            text-align: center;
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem;
-        }
+  <meta charset="UTF-8" />
+  <title>SvarLabs – SaMa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Music&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: #151c28;
+      color: #fff;
+      font-family: 'Noto Music', 'Noto Serif', serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+    }
 
-        .logo {
-            font-family: 'Noto Music', 'Noto Serif', serif;
-            font-weight: 700;
-            font-size: 3.5rem;
-            letter-spacing: 0.07em;
-            display: inline-flex;
-            align-items: baseline;
-            gap: 0.01em;
-            color: #f9a826;
-            margin-top: 2em;
-            margin-bottom: 0.5em;
-        }
+    header,
+    footer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em;
+      box-sizing: border-box;
+    }
 
-        .treble {
-            font-size: 1.18em;
-            vertical-align: middle;
-            margin-right: 0.03em;
-        }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: #f9a826;
+      font-family: 'Noto Music', 'Noto Serif', serif;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-left: 1em;
+    }
 
-        .mirrored-quaver {
-            display: inline-block;
-            transform: scaleX(-1);
-            font-size: 2.38em;
-            /* visually matches the cap height of the text */
-            vertical-align: middle;
-            margin: 0 0.005em 0 0.005em;
-        }
+    .svar-line {
+      display: flex;
+      align-items: center;
+      font-size: 2.8rem;
+    }
 
-        .tagline {
-            font-size: 1.4rem;
-            color: #e0e0e0;
-            margin-bottom: 2em;
-            letter-spacing: 0.02em;
-            max-width: 400px;
-            font-weight: 400;
-        }
+    .treble {
+      font-size: 1.8em;
+      margin-right: -0.15em;
+      position: relative;
+      top: 2px;
+    }
 
-        .cta {
-            background: #f9a826;
-            color: #151c28;
-            padding: 0.9em 2.5em;
-            border-radius: 30px;
-            font-size: 1.15rem;
-            font-weight: 700;
-            text-decoration: none;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-            transition: background 0.25s ease;
-        }
+    .svar-text {
+      font-size: 1em;
+      letter-spacing: 0.03em;
+      padding-left: 0.05em;
+    }
 
-        .cta:hover {
-            background: #e58e26;
-        }
+    .labs-line {
+      font-size: 1.2rem;
+      letter-spacing: 0.15em;
+      margin-left: 2.1em;
+      margin-top: 0.2em;
+    }
 
-        footer {
-            width: 100%;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            background: transparent;
-            text-align: center;
-            padding-bottom: 1em;
-            z-index: 10;
-        }
+    .nav-links a {
+      color: #f0f0f0;
+      text-decoration: none;
+      margin-left: 1.5em;
+      font-size: 1.05rem;
+    }
 
-        .copyright {
-            color: #aaa;
-            font-size: 1rem;
-            letter-spacing: 0.02em;
-            font-family: 'Noto Serif', serif;
-        }
-    </style>
+    .center-content {
+      text-align: center;
+      margin-top: 4em;
+    }
+
+    @keyframes floatWave {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .sama-title {
+      font-size: 3.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      background: linear-gradient(90deg, #f9a826, #ffdb6e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.2em;
+      animation: floatWave 3.2s ease-in-out infinite;
+    }
+
+    .sama-tagline {
+      font-size: 1.3rem;
+      color: #e0e0e0;
+      margin-top: 0.5em;
+      letter-spacing: 0.02em;
+    }
+
+    .sama-description {
+      max-width: 720px;
+      margin: 2em auto 0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .powered-by {
+      margin-top: 1.5em;
+      font-size: 1rem;
+      font-family: 'Noto Serif', serif;
+      font-style: italic;
+      color: #cfcfcf;
+    }
+
+    .copyright {
+      text-align: center;
+      color: #aaa;
+      font-size: 0.9rem;
+      flex: 1;
+      margin-top: 3em;
+    }
+  </style>
 </head>
 
 <body>
+  <header>
     <div class="logo" aria-label="SvarLabs">
-        <span class="treble">&#119070;</span>
-        var La
-        <span class="mirrored-quaver">&#9834;</span>
-        s
+      <div class="svar-line">
+        <span class="treble">&#119070;</span><span class="svar-text">var</span>
+      </div>
+      <div class="labs-line">Labs</div>
     </div>
-    <div class="tagline">
-        Where every note finds its meaning.
+    <div class="nav-links">
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
     </div>
-</body>
-<footer>
+  </header>
+
+  <div class="center-content">
+    <div class="sama-title">SaMa</div>
+    <div class="sama-tagline">Born from melody, built for meaning.</div>
+
+    <div class="powered-by">
+      Powered by <em>Yaazh</em>
+    </div>
+
+    <p class="sama-description">
+      <strong>SaMa</strong> is Svar Labs’ flagship product — a semantic system for understanding sound, context, and musical intent. 
+      Inspired by the sacred <em>Sāma Veda</em> and powered by our internal engine <strong>Yaazh</strong>, 
+      SaMa bridges ancient musical wisdom with modern AI.
+    </p>
+  </div>
+
+  <footer>
     <div class="copyright">
-        &copy; 2025 SvarLabs. All rights reserved.
+      &copy; 2025 SvarLabs. All rights reserved.
     </div>
-</footer>
+  </footer>
+</body>
 
 </html>
